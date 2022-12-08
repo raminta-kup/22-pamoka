@@ -1,0 +1,106 @@
+$primary-color: rgba(17, 142, 158, 0.397);
+$phone-size: 480px;
+$tablet-size: 880px;
+
+body {
+    font-family: 'Red Hat Display';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10%;
+
+    @media screen and (max-width: $tablet-size) {
+        flex-direction: column;
+        height: 100%;
+        gap: 100px;
+        padding: 60px 0;
+    }
+
+    .container1 {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @media screen and (max-width: $tablet-size) {
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 24px;
+
+            @media screen and (max-width: $tablet-size) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(1fr, 3);
+            }
+
+            @media screen and (max-width: $phone-size) {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(1fr, 6);
+            }
+
+            .box {
+                padding: 20px;
+                height: 60px;
+                background-color: $primary-color;
+
+            }
+        }
+
+    }
+
+    .container2 {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        border: 1px solid black;
+        border-radius: 8px;
+
+        @media screen and (max-width: $tablet-size) {
+            width: 90%;
+        }
+
+        .img {
+            height: 260px;
+            width: 100%;
+            background-color: $primary-color;
+            border-bottom: 1px solid black;
+        }
+
+        .mini-container {
+            padding: 0 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 40px;
+
+            h2 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+        }
+
+    }
+
+}
